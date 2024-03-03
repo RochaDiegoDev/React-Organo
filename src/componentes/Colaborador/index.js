@@ -5,7 +5,12 @@ import './colaborador.css'
 
 const Colaborador = ({ colaborador, corDeFundo, aoDeletar,  }) => {
     return (<div className="colaborador">
-        <IoIosCloseCircleOutline size={30} color="white" className='deletar' onClick={aoDeletar}/>
+        <IoIosCloseCircleOutline 
+        size={30} 
+        color="white" 
+        className='deletar' 
+        onClick={() => aoDeletar(colaborador.id)}
+        />
 
         <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
             <img src={colaborador.imagem} alt={colaborador.nome} />
